@@ -1,0 +1,223 @@
+
+/* Estilos de la pagina de malla curriculum de la ULA ICINF 2020 */
+.pagina_malla{
+  background-color: #E9F4F1;
+}
+
+/* Titulo de la malla curricular */
+
+.titulo{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  background: #598EFA;
+  height: 70px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 4px 5px 17px -4px #96C7E5;
+}
+
+.titul_text{
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  flex: 1;
+}
+
+.ula_logo {
+  width: 68px;
+  height: 50px;
+  margin-left: 10px;
+  display: flex;
+  margin-top: 10px;
+  transition: transform 0.3s ease; 
+}
+
+.ula_logo:hover {
+  animation: vibrate 0.3s linear infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: scale(1.1) translateX(0); 
+  }
+  25% {
+    transform: scale(1.1) translateX(-2px); 
+  }
+  50% {
+    transform: scale(1.2) translateX(2px);
+  }
+  75% {
+    transform: scale(1.2) translateX(-2px);
+  }
+  100% {
+    transform: scale(1.1) translateX(0); 
+  }
+}
+
+
+
+/* contenedor de los ramos del año, contiene dos semestres */
+   .container_malla {
+    display: grid;
+    gap: 4px;
+  }
+
+/* Grid del año de la malla */
+.content_one{
+  
+  /* 5px separado del componente anterior */
+    margin: 5px auto;
+    width: 60%;
+    display: grid;
+    grid-template-rows: 50px repeat(2, 1fr); 
+    grid-template-columns: 100px 1fr 1fr; 
+    gap: 4px;
+    border-radius: 5px;
+}
+
+
+/* Titulo del año del semestre */
+.año{
+  background-color: #6985F5;
+  grid-column:1/4;
+  color: black;
+  text-align: center;
+  display: flex; 
+  align-items: center;     
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+
+/* Trabajar aqui */
+.elemento_malla {
+  color: black;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #E0E1ED;
+  position: relative;
+
+  /* Importante para que no se salgan del container */
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+.elemento_malla:hover {
+  transform: scale(0.95);
+  box-shadow: 4px 5px 17px -4px #96C7E5;
+}
+
+.elemento_malla::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #96C7E5 ;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 800ms;
+}
+
+.elemento_malla:hover::before {
+  width: 250%;
+}
+
+
+
+/* Texto de los semestres */
+.semestre_1{
+  background-color: #96C7E5;
+  
+  grid-row: 2/3;
+  color: white;
+  display: flex; 
+  align-items: center;     
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+  width: 100px;
+  display: flex; 
+  align-items: center;     
+  justify-content: center;
+}
+
+.semestre_2{
+  background-color: #96C7E5;
+  grid-row: 3/4;
+  color: white;
+  display: flex; 
+  align-items: center;     
+  justify-content: center;
+  background-color: #99A9EF;
+  color: black;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif; /* Aplica la fuente Open Sans */
+  font-weight: bold;
+  font-size: 15px;
+
+  width: 100px;
+  display: flex; 
+  align-items: center;     
+  justify-content: center;
+}
+
+/* posicionamiento de los ramos en el grid del año */
+.ramos_semestre_1{
+  grid-row: 2 / 3;
+  grid-column: 2/4;
+  
+}
+
+.ramos_semestre_2{
+  grid-row: 3 / 4;
+  grid-column: 2/4;
+}
+
+/* Contenido del pie de pagina */
+.pie_pagina{
+  background-color: #DCE9F4;
+  color: white;
+  display: flex; 
+  align-items: center;     
+  border-radius: 10px; 
+  height: 70px;
+  
+}
+
+.text_pie{
+  color: black;
+  margin-left: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+
+}
+
+
+
+
+
